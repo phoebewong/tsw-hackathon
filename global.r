@@ -1,0 +1,5 @@
+library(tidyverse)
+hospital.df <- read.csv("./data/hospital-data.csv", header = TRUE, sep = ",", comment.char="",stringsAsFactors = FALSE)
+hospital.df$ZIP.Code <- as.character(hospital.df$ZIP.Code)
+hospital.df$ZIP.Code <- ifelse(nchar(hospital.df$ZIP.Code) == 4, paste0("0", hospital.df$ZIP.Code), hospital.df$ZIP.Code)
+hospital.df$ZIP.Code <- ifelse(nchar(hospital.df$ZIP.Code) == 3, paste0("00", hospital.df$ZIP.Code), hospital.df$ZIP.Code)
