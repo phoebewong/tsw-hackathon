@@ -11,3 +11,5 @@ hospital.df$pop_content <- paste(sep = "<br/>",
                                  hospital.df$Hospital.Name.bold,
                                  hospital.df$Address.1,
                                  hospital.df$full_phone_num)
+
+googleform_data_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vQb-KLDhc30-XgGMGcGw_wpMVney30x7vlPSM6kGpcfD_1sU59x_qg2uEGZDcOrDki_MmZU7X2P0iZg/pubhtml"

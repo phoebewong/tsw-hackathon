@@ -1,4 +1,5 @@
 # Shiny 2.2
+library(DT)
 library(dplyr)
 library(ggplot2)
 library("ggthemes")
@@ -10,6 +11,7 @@ library(plotly)
 # library(networkD3)
 library(markdown)
 library(leaflet)
+library(googlesheets)
 
 # library(bizdays)
 
@@ -127,4 +129,16 @@ shinyServer(function(input, output, session) {
                  popup = hospital.df$pop_content,
                  popupOptions = popupOptions(style = list("font-family" = "Ubuntu")))
   })
+  # Live UPdate
+  # ss <- gs_url(googleform_data_url, lookup = FALSE, visibility = "public")
+  # output$googleFormData <- DT::renderDataTable({
+  #   input$refresh
+  #   ss_dat <- gs_read(ss) %>%
+  #     mutate(Timestamp = Timestamp %>%
+  #              as.POSIXct(format = "%m/%d/%Y %H:%M:%S", tz = "PST8PDT")) %>%
+  #     #select(Timestamp, Hospital/Clinic_Name, Therapist_Name, Address_1) %>%
+  #     arrange(desc(Timestamp))
+  #   
+  #   DT::datatable(ss_dat)
+  # })
 })

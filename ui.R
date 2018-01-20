@@ -5,6 +5,7 @@ library(shinythemes)
 # library(networkD3)
 library(markdown)
 library(leaflet)
+library(DT)
 
 shinyUI(fluidPage(
   theme = shinytheme("united"),
@@ -20,7 +21,8 @@ shinyUI(fluidPage(
              # theme = "theme_sexwell.css",
              tabPanel(icon = icon("home"),"Home",
                       img(src="homeimage.PNG", height=462,width=1272),
-                      includeMarkdown("intro.md")),
+                      includeMarkdown("intro.md")
+                      ),
              navbarMenu("Practitioners", icon = icon("stethoscope"),
                         tabPanel("List of practitioners", icon = icon("address-book-o"),
                                  # Columns to show
@@ -41,7 +43,12 @@ shinyUI(fluidPage(
                         
                         tabPanel("Map of practitioners", icon = icon("map-marker"),
                                  leafletOutput("mymap"),
-                                 p())
+                                 p()),
+                        
+                        tabPanel("Live Update List of practitioners", icon = icon("address-book"))
+                                 # DT::dataTableOutput("googleFormData"),
+                                 # actionButton("refresh", "Refresh Sheet"))#,
+                        
                         ),
              navbarMenu("Education", icon = icon("graduation-cap"),
                         tabPanel("General Information", htmlOutput("frame")),
