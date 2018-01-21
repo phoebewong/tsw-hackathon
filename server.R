@@ -13,13 +13,15 @@ library(markdown)
 library(leaflet)
 library(googlesheets)
 
-# library(bizdays)
-
-
 shinyServer(function(input, output, session) {
-  output$logo <- renderImage({
-    hospital.df[which(hospital.df$City == input$show_rows), input$show_cols, drop = FALSE]
+  output$logo <- renderUI({
+    graphic <- tags$iframe(src = "https://create.piktochart.com/embed/27453761-pt4phackathonlogo",
+                           height = 72,
+                           width = 150,
+                           scrolling = "no")
+    print(graphic)
   })
+  
   display.df <- reactive({
     #validate(need(input$meet.df != "", "Please upload a data set"))
     display.df <- meet.df()

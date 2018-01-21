@@ -1,6 +1,6 @@
-# Visualize Microsoft Outlook Meeting Data in Shiny
-This is a repository of my Shiny application that visualizes Microsoft Outlook Calendar Data.
+# Technology Supporting Women Hackathon
+This is a repo for Technology Supporting Women Hackathon project of SexWell team. The project has won the first place.
 
-The [application](https://phoebewong.shinyapps.io/calendar_shinyio/) is presented at [useR! 2017](https://www.user2017.brussels/uploads/2017_useR_Shiny_Outlook_Calendarv2.pdf) in Brussels, Belgium.
+The [R Shiny application](phoebe.shinyapps.io/pain2pleasure/) is presented at [Technology Supporting Women Hackathon](https://www.eventbrite.com/e/technology-supporting-women-hackathon-tickets-40108935907) in Boston, MA.
 
-I built this app for fun and as a proof of concept, but I would love to have your comments and feedback, feel free to reach out!
+I would love to have your comments and feedback, feel free to reach out!

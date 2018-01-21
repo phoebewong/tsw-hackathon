@@ -10,7 +10,10 @@ library(DT)
 shinyUI(fluidPage(
   theme = shinytheme("united"),
   # "theme_sexwell.css", #shinytheme("sandstone"),
-  titlePanel(img(src="logo.PNG",height=72,width=150)),
+  # titlePanel(img(src="logo.PNG",height=72,width=150)),
+  # titlePanel(htmlOutput("logo")),
+  titlePanel( HTML('<img src="logo.PNG"/ height=72 width=150>')),
+  
   # titlePanel("SexWell"),
   
   # sidebarLayout(
@@ -20,7 +23,8 @@ shinyUI(fluidPage(
              # img(src="logo.PNG",height=72,width=72),
              # theme = "theme_sexwell.css",
              tabPanel(icon = icon("home"),"Home",
-                      img(src="homeimage.PNG", height=462,width=1272),
+                      HTML('<img src="homeimage.PNG"/ height=462 width=1272>'),
+                      # img(src="homeimage.PNG", height=462,width=1272),
                       includeMarkdown("intro.md")
                       ),
              navbarMenu("Practitioners", icon = icon("stethoscope"),
