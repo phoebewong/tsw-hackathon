@@ -6,7 +6,7 @@ The project won the Technology Supporting Women Hackathon. The SexWell team incl
 
 I would love to have your comments and feedback, feel free to reach out!
 
-**Email**: pwong@legendary.com
+**Email**: phoebe.wong@berkeley.edu
 
 [LinkedIn](https://www.linkedin.com/in/wphoebe/)
 
