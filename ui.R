@@ -10,18 +10,10 @@ library(DT)
 shinyUI(fluidPage(
   theme = shinytheme("united"),
   # "theme_sexwell.css", #shinytheme("sandstone"),
-  # titlePanel(img(src="logo.PNG",height=72,width=150)),
-  # titlePanel(htmlOutput("logo")),
-  # titlePanel( HTML('<img src="logo.PNG"/ height=72 width=150>')),
+
   titlePanel(tags$img(src="logo.png", height=72,width=150),
              windowTitle = "SexWell"),
-  # titlePanel("SexWell"),
-  
-  # sidebarLayout(
-      # mainPanel(
-      # tabsetPanel(type = "tabs", 
   navbarPage("",
-             # img(src="logo.PNG",height=72,width=72),
              # theme = "theme_sexwell.css",
              tabPanel(icon = icon("home"),"Home",
                       HTML('<img src="homeimage.png"/ height=462 width=1272>'),
@@ -65,54 +57,14 @@ shinyUI(fluidPage(
                         tabPanel("Treatment", htmlOutput("treat")),
                         tabPanel("Misconceptions", htmlOutput("miscon"))
                         ),
-             
-             # tabPanel("Education", icon = icon("graduation-cap"),
-             #          # includeMarkdown("infographics.md")
-             #          htmlOutput("frame")),
-             # navbarMenu("Tracking", icon = icon("book"),
-              tabPanel("Daily Journal",  icon = icon("book"),
+            tabPanel("Daily Journal",  icon = icon("book"),
                                  tags$iframe(id = "googleform",
                                              src = "https://docs.google.com/forms/d/e/1FAIpQLScrz4dacVTOBFxc-HDIbYKzo80lxX828XLL27mUz_OXaxZOww/viewform?embedded=true",
                                              width = 760,
                                              height = 500,
                                              frameborder = 0,
-                                             marginheight = 0))
-                        # )
+                                             marginheight = 0)),
+             tabPanel("Contact",
+                      includeMarkdown("contact.md"))
              )
-
-                  # tabPanel("Summary", 
-                  #          h2(textOutput("summary1")),
-                  #          sliderInput("workhours", "Work Hours per Day:",min=1, max=24, value=8),
-                  #          # numericInput("bizdaycount", "Number of Business Days:", value = NULL,
-                  #          #              min=1, max=100, step=1),
-                  #          h3(textOutput("summary2")),
-                  #          checkboxInput("sortbyFreq", "Sort by Frequency", value = FALSE),
-                  #          plotOutput("monthplot"),
-                  #          downloadButton("downloadmonthplot", "Download the Plot Above"),
-                  #          plotOutput("monthtimeplot"),
-                  #          downloadButton("downloadmonthtimeplot", "Download the Plot Above")),
-                  # 
-                  # tabPanel("Plot: People",
-                  #          h3(textOutput("summary3")),
-                  #          tags$hr(),
-                  #          # Number of people to show
-                  #          sliderInput("n", "Number of People to Show:",min=1, max=40, value=20),
-                  #          plotOutput("plot1"),
-                  #          downloadButton("downloadplot1", "Download the Plot Above"),
-                  #          
-                  #          plotOutput("plot2"),
-                  #          downloadButton("downloadplot2", "Download the Plot Above")),
-                  # 
-                  # tabPanel("Interactive Heatmap: Time", plotlyOutput("timeplot1"),
-                  #          checkboxInput("showname", "Show Event Name", value = TRUE)),
-                  # tabPanel("Fun Facts", 
-                  #          h4(textOutput("introdateplot")),
-                  #          h5(textOutput("summarydateplot")),
-                  #          plotOutput("dateplot"),
-                  #          downloadButton("downloaddateplot", "Download the Plot Above")),
-                  # tabPanel("Contact", 
-                  #          includeMarkdown("contact.md"))
-                  # )
-    # )  
-  # )
 ))
