@@ -12,8 +12,9 @@ shinyUI(fluidPage(
   # "theme_sexwell.css", #shinytheme("sandstone"),
   # titlePanel(img(src="logo.PNG",height=72,width=150)),
   # titlePanel(htmlOutput("logo")),
-  titlePanel( HTML('<img src="logo.PNG"/ height=72 width=150>')),
-  
+  # titlePanel( HTML('<img src="logo.PNG"/ height=72 width=150>')),
+  titlePanel(tags$img(src="logo.png", height=72,width=150),
+             windowTitle = "SexWell"),
   # titlePanel("SexWell"),
   
   # sidebarLayout(
@@ -23,7 +24,7 @@ shinyUI(fluidPage(
              # img(src="logo.PNG",height=72,width=72),
              # theme = "theme_sexwell.css",
              tabPanel(icon = icon("home"),"Home",
-                      HTML('<img src="homeimage.PNG"/ height=462 width=1272>'),
+                      HTML('<img src="homeimage.png"/ height=462 width=1272>'),
                       # img(src="homeimage.PNG", height=462,width=1272),
                       includeMarkdown("intro.md")
                       ),
@@ -49,9 +50,9 @@ shinyUI(fluidPage(
                                  leafletOutput("mymap"),
                                  p()),
                         
-                        tabPanel("Live Update List of practitioners", icon = icon("address-book"))
-                                 # DT::dataTableOutput("googleFormData"),
-                                 # actionButton("refresh", "Refresh Sheet"))#,
+                        tabPanel("Live update list of practitioners", icon = icon("address-book"),
+                                 DT::dataTableOutput("googleFormData"),
+                                 actionButton("refresh", "Refresh Sheet"))#,
                         
                         ),
              navbarMenu("Education", icon = icon("graduation-cap"),

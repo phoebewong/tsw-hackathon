@@ -5,6 +5,6 @@ account: phoebe
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 258646
-bundleId: 1184878
+bundleId: 1186205
 url: https://phoebe.shinyapps.io/pain2pleasure/
-when: 1516487593.0454
+when: 1516586326.66015
